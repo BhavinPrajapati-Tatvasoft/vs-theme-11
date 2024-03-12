@@ -1,0 +1,157 @@
+<div class="heading-outer">
+    <h4 class="page-heading">Innerpage</h4>
+    <p class="page-sub-heading">
+        <img src="./assets/images/inner-page-ic.svg" alt="Inner" />
+        <span>Innerpage</span>
+    </p>
+</div>
+<div class="main-inner">
+    <div class="card table-card" data-aos="fade-up">
+        <h5>Table Style</h5>
+        <app-table></app-table>
+    </div>
+    <div class="card form-card">
+        <h5 data-aos="fade-in" data-aos-delay="170">Form Elements</h5>
+        <div data-aos="fade-up">
+            <h6>One Column</h6>
+            <div class="grid one-col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput value="John Doe">
+                </mat-form-field>
+            </div>
+        </div>
+        <div data-aos="fade-up">
+            <h6>Two Column</h6>
+            <div class="grid two-col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput value="John Doe">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+        <div data-aos="fade-up">
+            <h6>Three Column</h6>
+            <div class="grid three-col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div data-aos="fade-up">
+            <h6>Four Column</h6>
+            <div class="grid four-col">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                        <mat-option value="option1">Option 1</mat-option>
+                        <mat-option value="option2">Option 2</mat-option>
+                        <mat-option value="option3">Option 3</mat-option>
+                        <mat-option value="option1">Option 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <h5 data-aos="fade-up">Other Form Elements</h5>
+        <div data-aos="fade-up">
+            <h6>File Upload</h6>
+            <div class="input-wrapper">
+                <p>No file choosen</p>
+                <input type="file" id="file-upload" />
+                <label for="file-upload"><span>Browse</span></label>
+            </div>
+        </div>
+        <div data-aos="fade-up" class="control-wrapper">
+            <h6>Checkboxes</h6>
+            <div class="checkbox-outer">
+                <mat-checkbox color="primary">Option 1</mat-checkbox>
+                <mat-checkbox color="primary">Option 2</mat-checkbox>
+                <mat-checkbox color="primary">Option 3</mat-checkbox>
+            </div>
+        </div>
+        <div data-aos="fade-up" class="control-wrapper">
+            <h6>Radio Buttons</h6>
+            <mat-radio-group aria-label="Select Radio Option" class="radio-outer">
+                <mat-radio-button color="primary" value="1">Option 1</mat-radio-button>
+                <mat-radio-button color="primary" value="2">Option 2</mat-radio-button>
+                <mat-radio-button color="primary" value="3">Option 3</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div data-aos="fade-up">
+            <h6>Buttons</h6>
+            <div class="btns-outer">
+                <button mat-flat-button color="primary">Primary</button>
+                <button mat-stroked-button color="primary">Secondary</button>
+            </div>
+        </div>
+    </div>
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" dynamicHeight data-aos="fade-up">
+        <mat-tab label="Tab 1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque consectetur volutpat libero elementum
+            arcu, suspendisse consectetur aliquet risus. Ac vitae sit lectus justo. Tristique nisi, egestas varius eu
+            lectus nisi, aenean est sed. Interdum placerat pellentesque elementum eget netus faucibus sed. Non nulla
+            lectus feugiat quam varius nullam. Ut arcu vitae nunc porttitor phasellus. Id etiam purus tortor etiam
+            neque. Ipsum dui cras habitasse cras at lorem cursus enim. Lectus interdum facilisis sem aliquam facilisi
+            scelerisque vestibulum pharetra sollicitudin.
+        </mat-tab>
+        <mat-tab label="Tab 2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque consectetur volutpat libero elementum arcu,
+            suspendisse consectetur aliquet risus. Ac vitae sit lectus justo. Tristique nisi, egestas varius eu lectus
+            nisi, aenean est sed. Ut arcu vitae nunc porttitor phasellus. Id etiam purus tortor etiam neque. Ipsum dui
+            cras habitasse cras at lorem cursus enim. Lectus interdum facilisis sem aliquam facilisi scelerisque
+            vestibulum pharetra sollicitudin.
+        </mat-tab>
+        <mat-tab label="Tab 3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque consectetur volutpat libero elementum
+            arcu, suspendisse consectetur aliquet risus. Ac vitae sit lectus justo. Tristique nisi, egestas varius eu
+            lectus nisi, aenean est sed. Interdum placerat pellentesque elementum eget netus faucibus sed. Non nulla
+            lectus feugiat quam varius nullam
+        </mat-tab>
+        <mat-tab label="Tab 4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque consectetur volutpat libero elementum
+            arcu, suspendisse consectetur aliquet risus. Ac vitae sit lectus justo. Tristique nisi, egestas varius eu
+            lectus nisi, aenean est sed. Interdum placerat pellentesque elementum eget netus faucibus sed. Non nulla
+            lectus feugiat quam varius nullam. Ut arcu vitae nunc porttitor phasellus. Id etiam purus tortor etiam
+            neque. Ipsum dui cras habitasse cras at lorem cursus enim. Lectus interdum facilisis sem aliquam facilisi
+            scelerisque vestibulum pharetra sollicitudin. Interdum placerat pellentesque elementum eget netus faucibus
+            sed. Non nulla lectus feugiat quam varius nullam. Ac vitae sit lectus justo. Tristique nisi, egestas varius
+            eu lectus nisi, aenean est sed.
+        </mat-tab>
+    </mat-tab-group>
+    <app-footer></app-footer>
+</div>

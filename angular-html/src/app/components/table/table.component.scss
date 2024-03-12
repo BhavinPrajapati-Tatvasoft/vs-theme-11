@@ -1,0 +1,209 @@
+.table-responsive {
+  width: 100%;
+  overflow: auto;
+  .mat-mdc-table {
+    margin-bottom: 16px;
+  }
+}
+.status {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  height: 28px;
+  border-radius: 16px;
+  min-width: 86px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  &.Inactive {
+    background-color: #ff3232;
+  }
+  &.Active {
+    background-color: #70b036;
+  }
+}
+.mat-mdc-table {
+  .mat-mdc-cell,
+  .mat-mdc-header-cell {
+    vertical-align: middle;
+    border-bottom-color: #dbdbdb;
+    white-space: nowrap;
+  }
+  ::ng-deep .mat-sort-header.cdk-keyboard-focused .mat-sort-header-container {
+    border-bottom: none;
+  }
+  .mat-mdc-header-row,
+  .mat-mdc-row {
+    height: 48px;
+  }
+  .mat-mdc-header-row {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #333333;
+  }
+  .mdc-data-table__row:last-child {
+    .mat-mdc-cell {
+      border-bottom: 1px solid #dbdbdb;
+    }
+  }
+  .mat-mdc-row {
+    color: #666666;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mat-mdc-cell {
+    .action-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .mdc-icon-button {
+        border: 1px solid #dbdbdb;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover {
+          border-color: rgba($color: #00a3a2, $alpha: 0.04);
+        }
+        &:focus {
+          border-color: rgba($color: #00a3a2, $alpha: 0.12);
+        }
+        .mat-icon,
+        img {
+          height: 18px;
+          width: 18px;
+        }
+        .mat-icon {
+          display: inline-block;
+          vertical-align: middle;
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  ::ng-deep .status-head {
+    .mat-sort-header-container {
+      justify-content: center;
+      .mat-sort-header-content {
+        margin-left: 18px;
+      }
+    }
+  }
+}
+.mat-mdc-paginator {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  ::ng-deep .mat-mdc-paginator-container {
+    min-height: auto;
+    padding: 0;
+  }
+  ::ng-deep .mat-mdc-form-field {
+    margin-right: 0;
+  }
+  ::ng-deep .mat-mdc-paginator-range-label {
+    margin-right: 20px;
+  }
+  ::ng-deep .mat-mdc-select-value {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  ::ng-deep .mat-mdc-paginator-page-size {
+    align-items: center;
+  }
+  //  .mdc-text-field--outlined .mat-mdc-form-field-infix
+  ::ng-deep .mat-mdc-paginator-page-size-select {
+    width: 48px;
+    .mat-mdc-select-arrow-wrapper svg {
+      background-image: url("../../../assets/images/pagination-down-arrow.svg");
+      background-size: 20px;
+    }
+    .mat-mdc-text-field-wrapper {
+      padding: 0 6px;
+      .mat-mdc-form-field-infix {
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+    }
+  }
+  ::ng-deep .mat-mdc-paginator-range-actions {
+    .mat-mdc-paginator-navigation-next {
+      svg {
+        background: url("../../../assets/images/pagination-next-arrow.svg")
+          center no-repeat;
+      }
+    }
+    .mat-mdc-paginator-navigation-previous {
+      svg {
+        background: url("../../../assets/images/pagination-prev-arrow.svg")
+          center no-repeat;
+      }
+    }
+    .mdc-icon-button {
+      height: 40px;
+      width: 40px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .mdc-icon-button__ripple {
+        &::before {
+          background-color: #00a3a2;
+        }
+      }
+      &.mat-mdc-tooltip-disabled {
+        opacity: 0.5;
+      }
+      svg {
+        height: 18px;
+        width: 18px;
+        background-size: 18px;
+        path {
+          display: none;
+        }
+      }
+    }
+  }
+}
+::ng-deep .pagination-menu.mat-mdc-select-panel {
+  .mat-mdc-option {
+    min-height: auto;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 16px;
+    justify-content: center;
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+  ::ng-deep .mat-mdc-paginator {
+    .mat-mdc-paginator-container {
+      justify-content: center;
+      gap: 2px;
+    }
+    .mat-mdc-paginator-page-size-label {
+      margin-left: 12px;
+    }
+    .mat-mdc-paginator-page-size {
+      margin-right: 0;
+    }
+  }
+}

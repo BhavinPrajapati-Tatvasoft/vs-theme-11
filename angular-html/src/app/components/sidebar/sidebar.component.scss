@@ -1,0 +1,121 @@
+.sidebar {
+  background-color: #ffffff;
+  width: 155px;
+  box-shadow: 0 4px 20px 0 rgba($color: #000000, $alpha: 0.08);
+  border-radius: 12px;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  height: calc(100vh - 80px);
+  z-index: 3;
+  transition: all 0.3s;
+  .logo {
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    height: calc(100% - 160px);
+    overflow: auto;
+  }
+  li {
+    &:not(:last-child) {
+      padding-bottom: 4px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      color: #333333;
+      transition: all 0.3s;
+      padding: 4px;
+      min-height: 90px;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        content: "";
+        height: 100%;
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba($color: #00a3a2, $alpha: 0.08);
+        transition: all 0.3s;
+      }
+      .nav-link-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+      }
+      .nav-label {
+        line-height: 24px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        i {
+          img {
+            transform: translateY(-24px);
+          }
+        }
+        color: #00a3a2;
+      }
+    }
+    i {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      height: 24px;
+      width: 24px;
+      overflow: hidden;
+      margin-bottom: 4px;
+      img {
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .sidebar {
+    top: 20px;
+    left: 20px;
+    bottom: 0;
+    height: calc(100vh - 40px);
+    .logo {
+      min-height: 144px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .sidebar {
+    left: -185px;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    border-radius: 0;
+    z-index: 4;
+    .logo {
+      min-height: 140px;
+    }
+  }
+}
+@media (max-width: 575px) {
+}

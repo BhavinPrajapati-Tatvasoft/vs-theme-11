@@ -1,0 +1,148 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$primaryColor: (
+  50: #000000,
+  100: #002120,
+  200: #004141,
+  300: #006261,
+  400: #008282,
+  500: #00a3a2,
+  600: #33b5b5,
+  700: #66c8c7,
+  800: #99dada,
+  900: #ccedec,
+  A100: #ff0000,
+  A200: #ff0000,
+  A400: #ff0000,
+  A700: #ff0000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-blue: (
+  50: #e7e9f7,
+  100: #c2c9eb,
+  200: #9aa5de,
+  300: #7281d1,
+  400: #5366c7,
+  500: #354bbd,
+  600: #3044b7,
+  700: #283bae,
+  800: #2233a6,
+  900: #162398,
+  A100: #cdd1ff,
+  A200: #9aa2ff,
+  A400: #6774ff,
+  A700: #4d5cff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$my-custom-typography-config: mat.define-typography-config(
+  $font-family: '"Poppins", sans-serif',
+  $headline-5: mat.define-typography-level(56px, 64px, 400),
+  $headline-6: mat.define-typography-level(48px, 54px, 400),
+  $subtitle-1: mat.define-typography-level(36px, 42px, 400),
+  $body-1: mat.define-typography-level(28px, 36px, 400),
+  $body-2: mat.define-typography-level(16px, 20px, 400),
+);
+
+$angular-html-primary: mat.define-palette($primaryColor);
+$angular-html-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$my-typography: mat.define-typography-config();
+
+// The warn palette is optional (defaults to red).
+$angular-html-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$angular-html-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-html-primary,
+      accent: $angular-html-accent,
+      warn: $angular-html-warn,
+    ),
+    typography: $my-custom-typography-config,
+  )
+);
+
+// Define an alternate dark theme.
+// $dark-primary: mat-palette($mat-brown);
+// $dark-primary: mat-palette($md-blue);
+// $dark-accent: mat-palette($mat-amber, A200, A100, A400);
+// $dark-warn: mat-palette($mat-deep-orange);
+// $custom-angular-dark-theme: mat-dark-theme(
+//   (
+//     color: (
+//       primary: $dark-primary,
+//       accent: $dark-accent,
+//       warn: $dark-warn,
+//     ),
+//   )
+// );
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($angular-html-theme);
+@include mat.all-component-typographies($my-custom-typography-config);
+
+//dark theme
+// .dark-theme {
+//   @include angular-material-color($custom-angular-dark-theme);
+// }
+
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5ffff;
+  color: #666666;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: subpixel-antialiased;
+}

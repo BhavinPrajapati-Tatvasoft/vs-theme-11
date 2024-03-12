@@ -1,0 +1,188 @@
+<div class="heading-outer">
+    <h4 class="page-heading">Dashboard</h4>
+    <p class="page-sub-heading">
+        <img src="./assets/images/dashboard-page-ic.svg" alt="Dashboard" />
+        <span>Dashboard</span>
+    </p>
+</div>
+<div class="main-inner">
+    <div class="statistic-outer section-row">
+        <a href="javascript:void(0)" title="Sales" class="card statisctic-card" data-aos="fade-up">
+            <div class="statistic-heading">
+                <div class="number-item">
+                    <h6>Sales</h6>
+                    <p [countUp]="12000" [reanimateOnClick]="false"></p>
+                </div>
+                <i class="icon">
+                    <img src="./assets/images/sales-ic.svg" alt="Sales">
+                </i>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-content">
+                    <p>Total Sales</p>
+                    <span class="progress-number">
+                        50%
+                    </span>
+                </div>
+                <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+            </div>
+        </a>
+        <a href="javascript:void(0)" title="Profit" class="card statisctic-card" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="statistic-heading">
+                <div class="number-item">
+                    <h6>Profit</h6>
+                    <div class="couinter-prefix">
+                        <span>$</span>
+                        <p [countUp]="5000" [reanimateOnClick]="false"></p>
+                    </div>
+                </div>
+                <i class="icon">
+                    <img src="./assets/images/profit-ic.svg" alt="Profit">
+                </i>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-content">
+                    <p>Total Profit</p>
+                    <span class="progress-number">
+                        60%
+                    </span>
+                </div>
+                <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+            </div>
+        </a>
+        <a href="javascript:void(0)" title="Active Referrals" class="card statisctic-card" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="statistic-heading">
+                <div class="number-item">
+                    <h6>Active Referrals</h6>
+                    <p [countUp]="1000" [reanimateOnClick]="false"></p>
+                </div>
+                <i class="icon">
+                    <img src="./assets/images/referral-ic.svg" alt="Active Referrals">
+                </i>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-content">
+                    <p>Total Referrals</p>
+                    <span class="progress-number">
+                        20%
+                    </span>
+                </div>
+                <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+            </div>
+        </a>
+        <a href="javascript:void(0)" title="Opened Invites" class="card statisctic-card" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="statistic-heading">
+                <div class="number-item">
+                    <h6>Opened Invites</h6>
+                    <p [countUp]="12000" [reanimateOnClick]="false"></p>
+                </div>
+                <i class="icon">
+                    <img src="./assets/images/invites-ic.svg" alt="Opened Invites">
+                </i>
+            </div>
+            <div class="progress-wrapper">
+                <div class="progress-content">
+                    <p>Total Invites</p>
+                    <span class="progress-number">
+                        80%
+                    </span>
+                </div>
+                <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+            </div>
+        </a>
+    </div>
+    <div class="graph-grid">
+        <div class="card sales-analysis-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-header">
+                <h5>Sales Analysis</h5>
+                <ul class="dataset">
+                    <li><span class="dataset-icon blue"></span> Dataset 1</li>
+                    <li><span class="dataset-icon red"></span> Dataset 2</li>
+                </ul>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="sales-analysis-action" class="action-btn"
+                    color="primary">
+                    <mat-icon>
+                        <img src="./assets/images/action-ic.svg" alt="Action">
+                    </mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        <span>Item 1</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 2</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 3</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <zingchart-angular class="sales-chart" [config]="salesAnalysisConfig"></zingchart-angular>
+        </div>
+        <div class="card mini-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-header">
+                <h6>Total Earnings</h6>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Total Earnings" class="action-btn"
+                    color="primary">
+                    <mat-icon>
+                        <img src="./assets/images/action-ic.svg" alt="Action">
+                    </mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        <span>Item 1</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 2</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 3</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <!-- <p >$6,586.40</p> -->
+            <div class="couinter-prefix">
+                <span>$</span>
+                <p class="total-numbers" [countUp]="658640" [reanimateOnClick]="false"></p>
+            </div>
+            <p class="updated-rate-text"><span class="red-status"><img src="./assets/images/arrow-downward-ic.svg"
+                        alt="Down">40%</span> In Previous 4 Months
+            </p>
+            <zingchart-angular [height]="150" [config]="totalEarningConfig" class="mini-chart"></zingchart-angular>
+        </div>
+        <div class="card mini-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="card-header">
+                <h6>Total Orders</h6>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Total Orders" class="action-btn"
+                    color="primary">
+                    <mat-icon>
+                        <img src="./assets/images/action-ic.svg" alt="Action">
+                    </mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        <span>Item 1</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 2</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Item 3</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <p class="total-numbers" [countUp]="1500" [reanimateOnClick]="false"></p>
+            <p class="updated-rate-text"><span class="green-status"><img src="./assets/images/arrow-upward-ic.svg"
+                        alt="Up">10%</span> In Previous 4 Months</p>
+            <zingchart-angular [height]="150" [config]="totalOrderConfig" class="mini-chart"></zingchart-angular>
+        </div>
+    </div>
+    <div class="card table-card" data-aos="fade-up">
+        <h5>Table Style</h5>
+        <app-table></app-table>
+    </div>
+    <app-footer></app-footer>
+</div>
