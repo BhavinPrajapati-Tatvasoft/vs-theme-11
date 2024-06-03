@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard | vs-theme-11</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Meta descriptions may be included in search results to concisely summarize page content.">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <button type="button" class="btn toggle-btn icon-btn">
+                <img src="images/menu-ic.svg" alt="Menu" />
+            </button>
+            <div class="search-wrapper">
+                <input type="text" class="form-control" placeholder="Search Here..." />
+                <button type="button" class="btn">
+                    <img src="images/search-ic.svg" alt="Search" />
+                </button>
+            </div>
+            <div class="heading-right">
+                <button type="button" class="btn search-btn">
+                    <img src="images/search-white-ic.svg" alt="Search" />
+                </button>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle notifications-btn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="images/notifications-ic.svg" alt="Notification" />
+                        <span class="badge"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><span>Item 1</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span>Item 2</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span>Item 3</span></a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle profile-btn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="images/user-profile.png" alt="User Profile" />
+                        <span>Alexander Rusk</span>
+                        <img src="images/down-arrow-ic.svg" alt="Down Arrow" />
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end profile-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" title="User">
+                                <img src="images/user-ic.svg" alt="User" />
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" title="Setting">
+                                <img src="images/setting-ic.svg" alt="Setting" />
+                                <span>Setting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" title="Logout">
+                                <img src="images/logout-ic.svg" alt="Logout" />
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="search-overlay"></div>
+        <!-- Header End -->
+
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+            <a href="#" title="Logo" class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="dashboard.html" title="Dashboard" class="active">
+                        <i>
+                            <img src="images/dashboard-default-ic.svg" alt="Dashboard" class="default-icon" />
+                            <img src="images/dashboard-active-ic.svg" alt="Dashboard" class="active-icon" />
+                        </i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Calendar">
+                        <i>
+                            <img src="images/calendar-default-ic.svg" alt="Calendar" class="default-icon" />
+                            <img src="images/calendar-active-ic.svg" alt="Calendar" class="active-icon" />
+                        </i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Pages">
+                        <i>
+                            <img src="images/pages-default-ic.svg" alt="Pages" class="default-icon" />
+                            <img src="images/pages-active-ic.svg" alt="Pages" class="active-icon" />
+                        </i>
+                        <span>Pages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Help">
+                        <i>
+                            <img src="images/help-default-ic.svg" alt="Help" class="default-icon" />
+                            <img src="images/help-active-ic.svg" alt="Help" class="active-icon" />
+                        </i>
+                        <span>Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Mails">
+                        <i>
+                            <img src="images/email-default-ic.svg" alt="Mails" class="default-icon" />
+                            <img src="images/email-active-ic.svg" alt="Mails" class="active-icon" />
+                        </i>
+                        <span>Mails</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="sidebar-overlay"></div>
+        <!-- Sidebar End -->
+
+        <main class="main-content">
+            <div class="heading-outer">
+                <h4 class="page-heading">Dashboard</h4>
+                <p class="page-sub-heading">
+                    <img src="images/dashboard-page-ic.svg" alt="Dashboard" />
+                    <span>Dashboard</span>
+                </p>
+            </div>
+            <div class="main-inner">
+                <div class="statistic-outer section-row">
+                    <a href="#" title="Sales" class="card statisctic-card">
+                        <div class="statistic-heading">
+                            <div class="number-item">
+                                <h6>Sales</h6>
+                                <p>12,000</p>
+                            </div>
+                            <i class="icon">
+                                <img src="images/sales-ic.svg" alt="Sales">
+                            </i>
+                        </div>
+                        <div class="progress-wrapper">
+                            <div class="progress-content">
+                                <p>Total Sales</p>
+                                <span class="progress-number">
+                                    50%
+                                </span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" title="Profit" class="card statisctic-card">
+                        <div class="statistic-heading">
+                            <div class="number-item">
+                                <h6>Profit</h6>
+                                <p>$5,000</p>
+                            </div>
+                            <i class="icon">
+                                <img src="images/profit-ic.svg" alt="Profit">
+                            </i>
+                        </div>
+                        <div class="progress-wrapper">
+                            <div class="progress-content">
+                                <p>Total Profit</p>
+                                <span class="progress-number">
+                                    60%
+                                </span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" title="Active Referrals" class="card statisctic-card">
+                        <div class="statistic-heading">
+                            <div class="number-item">
+                                <h6>Active Referrals</h6>
+                                <p>1,000</p>
+                            </div>
+                            <i class="icon">
+                                <img src="images/referral-ic.svg" alt="Active Referrals">
+                            </i>
+                        </div>
+                        <div class="progress-wrapper">
+                            <div class="progress-content">
+                                <p>Total Referrals</p>
+                                <span class="progress-number">
+                                    20%
+                                </span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" title="Opened Invites" class="card statisctic-card">
+                        <div class="statistic-heading">
+                            <div class="number-item">
+                                <h6>Opened Invites</h6>
+                                <p>12,000</p>
+                            </div>
+                            <i class="icon">
+                                <img src="images/invites-ic.svg" alt="Opened Invites">
+                            </i>
+                        </div>
+                        <div class="progress-wrapper">
+                            <div class="progress-content">
+                                <p>Total Invites</p>
+                                <span class="progress-number">
+                                    80%
+                                </span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="graph-grid">
+                    <div class="card sales-analysis-card">
+                        <div class="card-header">
+                            <h5>Sales Analysis</h5>
+                            <ul class="dataset">
+                                <li><span class="dataset-icon blue"></span> Dataset 1</li>
+                                <li><span class="dataset-icon red"></span> Dataset 2</li>
+                            </ul>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle action-btn" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="images/action-ic.svg" alt="Action" />
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Item 1</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 2</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 3</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sales-chart-outer">
+                            <canvas id="salesChart" height="100%" width="100%"></canvas>
+                        </div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="card-header">
+                            <h6>Total Earnings</h6>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle action-btn" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="images/action-ic.svg" alt="Action" />
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Item 1</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 2</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 3</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="couinter-prefix">
+                            <span>$</span>
+                            <p class="total-numbers">658640</p>
+                        </div>
+                        <p class="updated-rate-text">
+                            <span class="red-status">
+                                <img src="images/arrow-downward-ic.svg" alt="Down">40%</span> In Previous 4
+                            Months
+                        </p>
+                        <div class="mini-chart-outer">
+                            <canvas id="totalEarningChart" height="100%" width="100%"></canvas>
+                        </div>
+                    </div>
+                    <div class="card mini-card">
+                        <div class="card-header">
+                            <h6>Total Orders</h6>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle action-btn" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="images/action-ic.svg" alt="Action" />
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><span>Item 1</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 2</span></a></li>
+                                    <li><a class="dropdown-item" href="#"><span>Item 3</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="couinter-prefix">
+                            <p class="total-numbers">1,500
+                            </p>
+                        </div>
+                        <p class="updated-rate-text">
+                            <span class="green-status">
+                                <img src="images/arrow-upward-ic.svg" alt="Down">10%</span> In Previous 4
+                            Months
+                        </p>
+                        <div class="mini-chart-outer">
+                            <canvas id="totalOrdersChart" height="100%" width="100%"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card table-card">
+                    <h5>Table Style</h5>
+                    <div class="table-responsive">
+                        <table class="table" id="datatable1">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Contact No.</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Courtney Henry</td>
+                                    <td>tim.jennings@example.com</td>
+                                    <td>8080 Railroad St.</td>
+                                    <td>+62 831 12322387</td>
+                                    <td class="text-center">
+                                        <div class="status danger">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ronald Richards</td>
+                                    <td>dolores.chambers@example.com</td>
+                                    <td>775 Rolling Green Rd.</td>
+                                    <td>+62 899 00192732</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Arlene McCoy</td>
+                                    <td>debbie.baker@example.com</td>
+                                    <td>3890 Poplar Dr.</td>
+                                    <td>+62 878 66253820</td>
+                                    <td class="text-center">
+                                        <div class="status danger">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Darrell Steward</td>
+                                    <td>bill.sanders@example.com</td>
+                                    <td>3605 Parker Rd.</td>
+                                    <td>+62 821 42358990</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kathryn Murphy</td>
+                                    <td>tanya.hill@example.com</td>
+                                    <td>8558 Green Rd.</td>
+                                    <td>+62 811 09998263</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dianne Russell</td>
+                                    <td>nathan.roberts@example.com</td>
+                                    <td>7529 E. Pecan St.</td>
+                                    <td>+62 812 66889253</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dianne Russell</td>
+                                    <td>nathan.roberts@example.com</td>
+                                    <td>7529 E. Pecan St.</td>
+                                    <td>+62 812 66889253</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dianne Russell</td>
+                                    <td>nathan.roberts@example.com</td>
+                                    <td>7529 E. Pecan St.</td>
+                                    <td>+62 812 66889253</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ronald Richards</td>
+                                    <td>dolores.chambers@example.com</td>
+                                    <td>775 Rolling Green Rd.</td>
+                                    <td>+62 899 00192732</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Arlene McCoy</td>
+                                    <td>debbie.baker@example.com</td>
+                                    <td>3890 Poplar Dr.</td>
+                                    <td>+62 878 66253820</td>
+                                    <td class="text-center">
+                                        <div class="status danger">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Darrell Steward</td>
+                                    <td>bill.sanders@example.com</td>
+                                    <td>3605 Parker Rd.</td>
+                                    <td>+62 821 42358990</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Kathryn Murphy</td>
+                                    <td>tanya.hill@example.com</td>
+                                    <td>8558 Green Rd.</td>
+                                    <td>+62 811 09998263</td>
+                                    <td class="text-center">
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/edit-ic.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn outlined-icon-btn">
+                                                <img src="images/delete-ic.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-nav"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p class="footer-text">V 1.1.0 | Copyright 2022. All rights reserved</p>
+        </footer>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
