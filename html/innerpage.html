@@ -14,33 +14,639 @@
 
 <body>
     <div class="wrapper">
-        <!-- Header Start -->
-        <header class="header">
+        <div class="wrapper-inner">
+            <!-- Header Start -->
+            <header class="header">
+                <button type="button" class="btn toggle-btn icon-btn">
+                    <img src="images/menu-ic.svg" alt="Menu" />
+                </button>
+                <a href="#" title="Logo" class="logo mobile-logo d-inline-block d-xl-none">
+                    <img src="images/mobile-logo.svg" alt="Logo" />
+                </a>
+                <div class="search-wrapper">
+                    <input type="text" class="form-control" id="search" placeholder="Search Here..." />
+                    <button type="button" class="btn">
+                        <img src="images/search-ic.svg" alt="Search" />
+                    </button>
+                </div>
+                <div class="heading-right">
+                    <button type="button" class="btn search-btn">
+                        <img src="images/search-white-ic.svg" alt="Search" />
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle notifications-btn" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="images/notifications-ic.svg" alt="Notification" />
+                            <span class="badge"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><span>Item 1</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span>Item 2</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span>Item 3</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle profile-btn" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="images/user-profile.png" alt="User Profile" />
+                            <span>Alexander Rusk</span>
+                            <img src="images/down-arrow-ic.svg" alt="Down Arrow" />
+                        </button>
+                        <ul class="dropdown-menu profile-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" title="User">
+                                    <img src="images/user-ic.svg" alt="User" />
+                                    <span>Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" title="Setting">
+                                    <img src="images/setting-ic.svg" alt="Setting" />
+                                    <span>Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="index.html" title="Logout">
+                                    <img src="images/logout-ic.svg" alt="Logout" />
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="search-overlay"></div>
+            <div class="mobile-search">
+                <input type="text" id="mobileSearch" class="form-control" placeholder="Search">
+                <button mat-icon-button="" color="primary" class="search-icon-btn btn">
+                    <img src="images/search-white-ic.svg">
+                </button>
+            </div>
+            <!-- Header End -->
 
-        </header>
-        <!-- <div class="mobile-search">
-            <input type="text" class="form-control" placeholder="Search">
-            <button mat-icon-button color="primary" class="search-icon-btn btn">
-                <img src="images/search-icon.svg" />
-            </button>
-        </div> -->
-        <div class="search-overlay"></div>
-        <!-- Header End -->
+            <!-- Sidebar Start -->
+            <aside class="sidebar">
+                <a href="#" title="Logo" class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+                <ul>
+                    <li>
+                        <a href="dashboard.html" title="Dashboard">
+                            <i>
+                                <img src="images/dashboard-default-ic.svg" alt="Dashboard" class="default-icon" />
+                                <img src="images/dashboard-active-ic.svg" alt="Dashboard" class="active-icon" />
+                            </i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Calendar">
+                            <i>
+                                <img src="images/calendar-default-ic.svg" alt="Calendar" class="default-icon" />
+                                <img src="images/calendar-active-ic.svg" alt="Calendar" class="active-icon" />
+                            </i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="innerpage.html" title="Pages" class="active">
+                            <i>
+                                <img src="images/pages-default-ic.svg" alt="Pages" class="default-icon" />
+                                <img src="images/pages-active-ic.svg" alt="Pages" class="active-icon" />
+                            </i>
+                            <span>Pages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Help">
+                            <i>
+                                <img src="images/help-default-ic.svg" alt="Help" class="default-icon" />
+                                <img src="images/help-active-ic.svg" alt="Help" class="active-icon" />
+                            </i>
+                            <span>Help</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Mails">
+                            <i>
+                                <img src="images/email-default-ic.svg" alt="Mails" class="default-icon" />
+                                <img src="images/email-active-ic.svg" alt="Mails" class="active-icon" />
+                            </i>
+                            <span>Mails</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="sidebar-overlay"></div>
+            <!-- Sidebar End -->
 
-        <!-- Sidebar Start -->
-        <aside class="sidebar">
-
-        </aside>
-        <div class="sidebar-overlay"></div>
-        <!-- Sidebar End -->
-
-        <main class="main-content">
-
-        </main>
-
-        <footer class="footer">
-            <p>V 1.1.0 | Copyright 2022. All rights reserved</p>
-        </footer>
+            <main class="main-content">
+                <div class="heading-outer">
+                    <h4 class="page-heading">Innerpage</h4>
+                    <p class="page-sub-heading">
+                        <img src="images/inner-page-ic.svg" alt="Inner" />
+                        <span>Innerpage</span>
+                    </p>
+                </div>
+                <div class="main-inner">
+                    <div class="card table-card mb-30" data-aos="fade-up">
+                        <h5>Table Style</h5>
+                        <div class="table-responsive">
+                            <table class="table" id="datatable1">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Contact No.</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Courtney Henry</td>
+                                        <td>tim.jennings@example.com</td>
+                                        <td>8080 Railroad St.</td>
+                                        <td>+62 831 12322387</td>
+                                        <td class="text-center">
+                                            <div class="status danger">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ronald Richards</td>
+                                        <td>dolores.chambers@example.com</td>
+                                        <td>775 Rolling Green Rd.</td>
+                                        <td>+62 899 00192732</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arlene McCoy</td>
+                                        <td>debbie.baker@example.com</td>
+                                        <td>3890 Poplar Dr.</td>
+                                        <td>+62 878 66253820</td>
+                                        <td class="text-center">
+                                            <div class="status danger">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Darrell Steward</td>
+                                        <td>bill.sanders@example.com</td>
+                                        <td>3605 Parker Rd.</td>
+                                        <td>+62 821 42358990</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kathryn Murphy</td>
+                                        <td>tanya.hill@example.com</td>
+                                        <td>8558 Green Rd.</td>
+                                        <td>+62 811 09998263</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dianne Russell</td>
+                                        <td>nathan.roberts@example.com</td>
+                                        <td>7529 E. Pecan St.</td>
+                                        <td>+62 812 66889253</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dianne Russell</td>
+                                        <td>nathan.roberts@example.com</td>
+                                        <td>7529 E. Pecan St.</td>
+                                        <td>+62 812 66889253</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dianne Russell</td>
+                                        <td>nathan.roberts@example.com</td>
+                                        <td>7529 E. Pecan St.</td>
+                                        <td>+62 812 66889253</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ronald Richards</td>
+                                        <td>dolores.chambers@example.com</td>
+                                        <td>775 Rolling Green Rd.</td>
+                                        <td>+62 899 00192732</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arlene McCoy</td>
+                                        <td>debbie.baker@example.com</td>
+                                        <td>3890 Poplar Dr.</td>
+                                        <td>+62 878 66253820</td>
+                                        <td class="text-center">
+                                            <div class="status danger">
+                                                Inactive
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Darrell Steward</td>
+                                        <td>bill.sanders@example.com</td>
+                                        <td>3605 Parker Rd.</td>
+                                        <td>+62 821 42358990</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kathryn Murphy</td>
+                                        <td>tanya.hill@example.com</td>
+                                        <td>8558 Green Rd.</td>
+                                        <td>+62 811 09998263</td>
+                                        <td class="text-center">
+                                            <div class="status success">
+                                                Active
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="action-btn">
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/edit-ic.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn outlined-icon-btn">
+                                                    <img src="images/delete-ic.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination-nav"></div>
+                    </div>
+                    <div class="card form-card" data-aos="fade-up" data-aos-delay="100">
+                        <h5>Form Elements</h5>
+                        <h6>One Column</h6>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="name5" placeholder="Name" value="John Doe" />
+                            <label for="name5">Name</label>
+                        </div>
+                        <h6>Two Column</h6>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name1" placeholder="Name"
+                                        value="John Doe" />
+                                    <label for="name1">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email1" placeholder="Email" />
+                                    <label for="email1">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h6>Three Column</h6>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name2" placeholder="Name" />
+                                    <label for="name2">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email2" placeholder="Email" />
+                                    <label for="email2">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select1">
+                                        <option selected value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="select1">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h6>Four Column</h6>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name3" placeholder="Name" />
+                                    <label for="name3">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email3" placeholder="Email" />
+                                    <label for="email3">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select2">
+                                        <option selected value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="select2">Select</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select3">
+                                        <option selected value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="select3">Select</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="mt-2">Other Form Elements</h5>
+                        <h6>File Upload</h6>
+                        <div class="input-wrapper">
+                            <p>No file choosen</p>
+                            <input type="file" id="file-upload" />
+                            <label for="file-upload">
+                                <span>Browse</span>
+                            </label>
+                        </div>
+                        <h6>Checkboxes</h6>
+                        <div class="checkbox-outer">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkOption1">
+                                <label class="form-check-label" for="checkOption1">
+                                    Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkOption2">
+                                <label class="form-check-label" for="checkOption2">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkOption3">
+                                <label class="form-check-label" for="checkOption3">
+                                    Option 3
+                                </label>
+                            </div>
+                        </div>
+                        <h6>Radio Buttons</h6>
+                        <div class="radio-outer">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioBtn" id="option1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="option1">
+                                    Option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioBtn" id="option2"
+                                    value="option2">
+                                <label class="form-check-label" for="option2">
+                                    Option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioBtn" id="option3"
+                                    value="option3">
+                                <label class="form-check-label" for="option3">
+                                    Option 3
+                                </label>
+                            </div>
+                        </div>
+                        <h6>Buttons</h6>
+                        <div class="btn-outer">
+                            <button type="button" class="btn btn-primary">
+                                <span>Primary</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-primary">
+                                <span>Secondary</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tab-wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-Tab1-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Tab1" type="button" role="tab" aria-controls="pills-Tab1"
+                                    aria-selected="true">
+                                    <span>Tab 1</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-Tab2-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Tab2" type="button" role="tab" aria-controls="pills-Tab2"
+                                    aria-selected="false">
+                                    <span>Tab 2</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-Tab3-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Tab3" type="button" role="tab" aria-controls="pills-Tab3"
+                                    aria-selected="false">
+                                    <span>Tab 3</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-Tab4-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Tab4" type="button" role="tab" aria-controls="pills-Tab4"
+                                    aria-selected="false">
+                                    <span>Tab 4</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-Tab1" role="tabpanel"
+                                aria-labelledby="pills-Tab1-tab" tabindex="0">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque consectetur volutpat
+                                libero
+                                elementum arcu, suspendisse consectetur aliquet risus. Ac vitae sit lectus justo.
+                                Tristique
+                                nisi, egestas varius eu lectus nisi, aenean est sed. Interdum placerat pellentesque
+                                elementum eget netus faucibus sed. Non nulla lectus feugiat quam varius nullam. Ut arcu
+                                vitae nunc porttitor phasellus. Id etiam purus tortor etiam neque. Ipsum dui cras
+                                habitasse
+                                cras at lorem cursus enim. Lectus interdum facilisis sem aliquam facilisi scelerisque
+                                vestibulum pharetra sollicitudin.
+                            </div>
+                            <div class="tab-pane fade" id="pills-Tab2" role="tabpanel" aria-labelledby="pills-Tab2-tab"
+                                tabindex="0">
+                                Interdum placerat pellentesque elementum eget netus faucibus sed. Non nulla lectus
+                                feugiat
+                                quam varius nullam. Ut arcu vitae nunc porttitor phasellus. Id etiam purus tortor etiam
+                                neque. Ipsum dui cras habitasse cras at lorem cursus enim. Lectus interdum facilisis sem
+                                aliquam facilisi scelerisque vestibulum pharetra sollicitudin.
+                            </div>
+                            <div class="tab-pane fade" id="pills-Tab3" role="tabpanel" aria-labelledby="pills-Tab3-tab"
+                                tabindex="0">
+                                Id etiam purus tortor etiam neque. Ipsum dui cras habitasse cras at lorem cursus enim.
+                                Lectus interdum facilisis sem aliquam facilisi scelerisque vestibulum pharetra
+                                sollicitudin.
+                            </div>
+                            <div class="tab-pane fade" id="pills-Tab4" role="tabpanel" aria-labelledby="pills-Tab4-tab"
+                                tabindex="0">
+                                Interdum placerat pellentesque elementum eget netus faucibus sed. Non nulla lectus
+                                feugiat
+                                quam varius nullam. Ut arcu vitae nunc porttitor phasellus. Id etiam purus tortor etiam
+                                neque. Ipsum dui cras habitasse cras at lorem cursus enim. Lectus interdum facilisis sem
+                                aliquam facilisi scelerisque vestibulum pharetra sollicitudin. Id etiam purus tortor
+                                etiam
+                                neque. Ipsum dui cras habitasse cras at lorem cursus enim.
+                                Lectus interdum facilisis sem aliquam facilisi scelerisque vestibulum pharetra
+                                sollicitudin.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <p class="footer-text">V 1.1.0 | Copyright 2022. All rights reserved</p>
+            </footer>
+        </div>
     </div>
 
     <!-- JavaScripts -->

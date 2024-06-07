@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import * as Aos from 'aos';
 
 @Component({
@@ -7,6 +8,9 @@ import * as Aos from 'aos';
   styleUrls: ['./innerpage.component.scss'],
 })
 export class InnerpageComponent {
+  constructor(private title: Title) {
+    this.title.setTitle('Innerpage');
+  }
   ngOnInit() {
     Aos.init({
       duration: 600,

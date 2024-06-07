@@ -6,7 +6,7 @@
   position: fixed;
   top: 40px;
   left: 40px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 124px);
   z-index: 3;
   transition: all 0.3s;
   .logo {
@@ -15,7 +15,7 @@
     justify-content: center;
   }
   ul {
-    height: calc(100% - 160px);
+    height: calc(100% - 150px);
     overflow: auto;
   }
   li {
@@ -101,10 +101,6 @@
   }
 }
 @media (max-width: 1199px) {
-}
-@media (max-width: 991px) {
-}
-@media (max-width: 767px) {
   .sidebar {
     left: -185px;
     top: 0;
@@ -116,6 +112,10 @@
       min-height: 140px;
     }
   }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
 }
 @media (max-width: 575px) {
 }

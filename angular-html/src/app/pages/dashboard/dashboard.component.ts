@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import ZingchartAngular from 'zingchart-angular/zingchart';
 import * as Aos from 'aos';
 
@@ -8,6 +9,9 @@ import * as Aos from 'aos';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
+  constructor(private title: Title) {
+    this.title.setTitle('Dashboard');
+  }
   // Sales Analysis Chart
   salesAnalysisConfig: ZingchartAngular.graphset = {
     type: 'area',

@@ -17,6 +17,7 @@ export class HeaderComponent {
   removeSearchbar() {
     document.body.classList.remove('open-search');
   }
+
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]>;

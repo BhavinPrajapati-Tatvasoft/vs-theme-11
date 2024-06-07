@@ -38,20 +38,20 @@
     z-index: 1;
     h6 {
       font-weight: 600;
-      padding-bottom: 12px;
+      padding-bottom: 4px;
       white-space: nowrap;
     }
     .number-item {
       p {
         font-size: 28px;
-        line-height: 34px;
+        line-height: 42px;
         font-weight: 600;
         color: #333333;
         padding-bottom: 0;
       }
     }
     .icon {
-      background-color: rgba($color: #00a3a2, $alpha: 0.06);
+      background-color: #e6f6f6;
       border-radius: 50%;
       display: block;
       padding: 14px;
@@ -124,7 +124,7 @@
 .graph-grid {
   display: grid;
   gap: 30px;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 35%;
   margin-bottom: 30px;
   .sales-analysis-card {
     grid-row-start: 1;
@@ -144,7 +144,7 @@
     line-height: 42px;
     font-weight: 600;
     color: #333333;
-    padding-bottom: 4px;
+    padding-bottom: 0;
   }
   .updated-rate-text {
     display: flex;
@@ -172,11 +172,11 @@
 .couinter-prefix {
   display: flex;
   align-items: center;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #333333;
   span {
-    font-size: 28px;
-    line-height: 34px;
-    font-weight: 600;
-    color: #333333;
     display: block;
   }
 }
@@ -195,6 +195,7 @@
   .graph-grid {
     gap: 20px;
     margin-bottom: 20px;
+    grid-template-columns: 50%;
     .sales-analysis-card {
       grid-row-start: auto;
       grid-row-end: auto;
@@ -213,6 +214,13 @@
   }
 }
 @media (max-width: 767px) {
+  .graph-grid {
+    grid-template-columns: 100%;
+    .sales-analysis-card {
+      grid-column-start: auto;
+      grid-column-end: auto;
+    }
+  }
 }
 @media (max-width: 575px) {
   .statisctic-card {

@@ -1,0 +1,45 @@
+<div class="login-wrapper">
+    <div class="login-banner">
+        <div class="login-banner-content" data-aos="fade-in">
+            <a href="#" title="Logo" class="logo">
+                <img src="./assets/images/login-logo.svg" alt="Logo">
+                <span>Company</span>
+            </a>
+            <app-login-banner></app-login-banner>
+        </div>
+    </div>
+    <div class="login-form-outer">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-center">LOGIN</h4>
+            <p class="info-text text-center">Please Enter Your Credentials</p>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput>
+                <mat-icon matSuffix>
+                    <img src="./assets/images/user-field-ic.svg" alt="User">
+                </mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button color="primary" mat-icon-button matSuffix (click)=" hide=!hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon class="material-icons-outlined">
+                        <img
+                            [src]="hide ? './assets/images/show-password-ic.svg':'./assets/images/hide-password-ic.svg' " />
+                    </mat-icon>
+                </button>
+            </mat-form-field>
+            <div class="action-wrapper">
+                <mat-checkbox color="primary">Remember me</mat-checkbox>
+                <a href=" #" title="Forgot Password?" class="primary-link">
+                    Forgot Password?
+                </a>
+            </div>
+            <a mat-flat-button color="primary" routerLink="/dashboard" title="Sign In">Sign In</a>
+            <p class="signup-text">Don't have an account? <a href="#" title="Sign Up" class="primary-link">Sign Up</a>
+            </p>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,210 @@
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  .login-banner {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 200%;
+      width: 200%;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background-color: rgba($color: #00a3a2, $alpha: 0.09);
+    }
+  }
+  .login-banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: 30px 14px 30px 50px;
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      span {
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 500;
+        color: #000000;
+      }
+    }
+  }
+  .login-form-outer {
+    max-width: calc(100% - 767px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    justify-content: center;
+    .card {
+      max-width: 460px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 4px 20px 0 rgba($color: #000000, $alpha: 0.08);
+      padding: 44px 50px;
+    }
+    h4 {
+      font-weight: 600;
+      line-height: 42px;
+      padding-bottom: 2px;
+      color: #333333;
+    }
+    .info-text {
+      font-size: 18px;
+      line-height: 26px;
+      padding-bottom: 39px;
+    }
+  }
+  .action-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+  }
+  .mat-primary.mat-mdc-button-base:not(.mdc-icon-button) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .signup-text {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.32px;
+    color: #333333;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 0;
+    justify-content: center;
+    gap: 4px;
+    a {
+      font-weight: 400;
+    }
+  }
+  .mat-mdc-form-field {
+    margin-bottom: 20px;
+  }
+  ::ng-deep .footer-text {
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    padding: 0;
+    z-index: 1;
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .login-wrapper {
+    .login-form-outer {
+      max-width: 70%;
+    }
+    .login-banner-content {
+      padding: 30px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+  .login-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .login-form-outer {
+      max-width: none;
+      padding: 0 20px 20px;
+      .card {
+        padding: 24px 30px;
+      }
+      .info-text {
+        padding-bottom: 30px;
+      }
+    }
+    .login-banner {
+      min-height: auto;
+      &::after {
+        right: -30%;
+        height: 160%;
+        width: 160%;
+        transform: translateY(-87%);
+      }
+    }
+    .login-banner-content {
+      padding: 20px;
+      align-items: normal;
+      .logo {
+        position: static;
+        margin: 0 auto 24px;
+      }
+    }
+    ::ng-deep .footer-text {
+      position: static;
+      padding-bottom: 20px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .login-wrapper {
+    .login-banner {
+      &::after {
+        right: -29%;
+        transform: translateY(-85%);
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .login-wrapper {
+    position: relative;
+    overflow: hidden;
+    .login-banner {
+      position: static;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100%;
+      overflow: hidden;
+      &::after {
+        height: 800%;
+        width: 800%;
+        right: -352%;
+        transform: translateY(-100%);
+      }
+    }
+    .login-form-outer {
+      padding: 16px;
+      margin: auto;
+      .card {
+        padding: 20px;
+      }
+      .info-text {
+        padding-bottom: 20px;
+      }
+    }
+    ::ng-deep .footer-text {
+      white-space: nowrap;
+    }
+    .login-banner-content {
+      justify-content: start;
+      padding-bottom: 0;
+      .logo {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

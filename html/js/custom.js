@@ -38,7 +38,7 @@ $(document).ready(function () {
   // Add new js functions here -----------------------------------------------------------------
 
   // Sidebar
-  $(".menu-btn").on("click", function (e) {
+  $(".toggle-btn").on("click", function (e) {
     $("body").toggleClass("open-menu");
   });
   $(".sidebar-overlay").on("click", function (e) {
@@ -243,7 +243,7 @@ $(document).ready(function () {
       },
       animation: {
         duration: 2000,
-        easing: "easeOutSine",
+        easing: "linear",
       },
     };
     var totalEarningChart = new Chart(ctx1, {
@@ -358,10 +358,7 @@ $(document).ready(function () {
     });
   }
 
-  $(".countup1 span").counterUp();
-  $(".countup2").counterUp();
-  $(".countup3 span").counterUp();
-  $(".countup4 span").counterUp();
+  $(".countup span,.counter").counterUp();
 
   // Password Toggle
   $(".password-btn").click(function () {
@@ -402,22 +399,30 @@ $(document).ready(function () {
     $paginationNav.append($customPagination);
   }
   $paginationNav.prepend(`
-  <div class="datatable-length-custom">
-  <span class="pagination-label">Rows per page: </span>
-    <select class="paging-select" id="customLengthMenu">
-      <option value="10">10</option>
-      <option value="15">15</option>
-      <option value="20">20</option>
-      <option value="25">25</option>
-    </select>
-  </div>
-`);
-
+    <div class="datatable-length-custom">
+    <span class="pagination-label">Rows per page: </span>
+      <select class="paging-select" id="customLengthMenu">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+      </select>
+    </div>
+  `);
   // Handle change in the custom length menu
   $("#customLengthMenu").on("change", function () {
     let pageLength = $(this).val();
     let table = $("#datatable1").DataTable();
     table.page.len(pageLength).draw();
+  });
+
+  $("#datatable2").DataTable({
+    sort: false,
+    filter: false,
+    info: false,
+    autoWidth: false,
+    dom: '<"top">rt<"bottom"flip><"clear">',
+    paging: false,
   });
 
   // AOS Initialize
